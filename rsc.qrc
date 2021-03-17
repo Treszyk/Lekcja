@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>papierkamien/kamien.png</file>
+        <file>papierkamien/nozyce.png</file>
+        <file>papierkamien/papier.png</file>
+        <file>papierkamien/pytajnik.png</file>
+    </qresource>
+</RCC>

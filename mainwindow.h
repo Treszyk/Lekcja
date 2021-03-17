@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,13 +17,31 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_papier_clicked();
+    void on_papierBtn_clicked();
 
-    void on_kamien_clicked();
+    void on_kamienBtn_clicked();
 
-    void on_nozyce_clicked();
+    void on_nozyceBtn_clicked();
+
+    void on_resetBtn_clicked();
+
+    void choicePressed();
 
 private:
     Ui::MainWindow *ui;
+    const int PAP = 0;
+    const int ROK = 1;
+    const int SCI = 2;
+    int wynikGracza;
+    int wynikKomputera;
+    int wyborGracza;
+    int wyborKomp;
+    int nrRundy;
+    QString zdjecia[3] = {":/images/papierkamien/papier.png",
+                         ":/images/papierkamien/kamien.png",
+                         ":/images/papierkamien/nozyce.png"};
+
+signals:
+    void choicePressedSignal();
 };
 #endif // MAINWINDOW_H
