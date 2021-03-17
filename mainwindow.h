@@ -15,6 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_papier_clicked();
+
+    void on_kamien_clicked();
+
+    void on_nozyce_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

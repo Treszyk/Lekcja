@@ -13,3 +13,18 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_papier_clicked()
+{
+
+}
+
+void MainWindow::on_kamien_clicked()
+{
+
+}
+
+void MainWindow::on_nozyce_clicked()
+{
+
+}
