@@ -32,14 +32,16 @@ private:
     const int PAP = 0;
     const int ROK = 1;
     const int SCI = 2;
+    const int PYT = 3;
     int wynikGracza;
     int wynikKomputera;
     int wyborGracza;
     int wyborKomp;
     int nrRundy;
-    QString zdjecia[3] = {":/images/papierkamien/papier.png",
-                         ":/images/papierkamien/kamien.png",
-                         ":/images/papierkamien/nozyce.png"};
+    const QString zdjecia[4] = {":/images/papierkamien/papier.png",
+                                ":/images/papierkamien/kamien.png",
+                                ":/images/papierkamien/nozyce.png",
+                                ":/images/papierkamien/pytajnik.png"};
 
 signals:
     void choicePressedSignal();
