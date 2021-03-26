@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QDebug>// usunac
 #include <QRandomGenerator>
 #include <windows.h>
 
@@ -13,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent)
     wynikKomputera = 0;
     nrRundy = 1;
 
-    connect(this, &MainWindow::choicePressedSignal, this, &MainWindow::choicePressed);
 }
 
 MainWindow::~MainWindow()
@@ -25,21 +23,21 @@ void MainWindow::on_papierBtn_clicked()
 {
     ui->zdjgracz->setPixmap(QPixmap(zdjecia[PAP]));
     wyborGracza = PAP;
-    emit choicePressed();
+    choicePressed();
 }
 
 void MainWindow::on_kamienBtn_clicked()
 {
     ui->zdjgracz->setPixmap(QPixmap(zdjecia[ROK]));
     wyborGracza = ROK;
-    emit choicePressed();
+    choicePressed();
 }
 
 void MainWindow::on_nozyceBtn_clicked()
 {
     ui->zdjgracz->setPixmap(QPixmap(zdjecia[SCI]));
     wyborGracza = SCI;
-    emit choicePressed();
+    choicePressed();
 }
 
 void MainWindow::on_resetBtn_clicked()
@@ -57,7 +55,6 @@ void MainWindow::choicePressed()
     nrRundy++;
     wyborKomp = QRandomGenerator::global()->bounded(0, 3);
     ui->zdjkomp->setPixmap(QPixmap(zdjecia[wyborKomp]));
-    qDebug() << wyborGracza << " " << wyborKomp;// usunac
     if(wyborGracza == wyborKomp)
     {
         ui->infoLabel->setText("REMIS!!!");

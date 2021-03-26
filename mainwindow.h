@@ -43,7 +43,5 @@ private:
                                 ":/images/papierkamien/nozyce.png",
                                 ":/images/papierkamien/pytajnik.png"};
 
-signals:
-    void choicePressedSignal();
 };
 #endif // MAINWINDOW_H
